@@ -17,6 +17,8 @@ class App < Sinatra::Base
 		result = db.execute("SELECT id, password_digest FROM user WHERE username=?", [username])
 
 		if result.empty?
+			slim(:no_login)
+		end
 			
 			
 		end
