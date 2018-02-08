@@ -7,10 +7,17 @@ html lang="en"
         link rel="stylesheet" href="/css/main.css"
         title Webbshop
     body
-        .navbar
-            h1.header_rubrik Webbshop
-            .login_box
-                a href="/login" Login
+        -if session[:user_id] 
+            .navbar
+                h1.header_rubrik Webbshop
+                .shopping_cart_box
+                    a href="/shopping_cart" 
+                        .shopping_cart_picture
+        -else
+            .navbar
+                h1.header_rubrik Webbshop
+                .login_box
+                    a href="/login" Login
         main
             ==yield
 

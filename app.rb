@@ -3,7 +3,6 @@ class App < Sinatra::Base
 	enable :sessions
 
 	get('/') do
-		'Hemskärm!'
 		slim(:home)
 	end
 
@@ -69,7 +68,10 @@ class App < Sinatra::Base
 		if BCrypt::Password.new(password_digest) == password
 			session[:user_id] = user_id
 			redirect('/')
-		end	
+		else
+			set_error("Invalid Credentials")
+			redirect('/error')
+		end
 	end
 end           
 

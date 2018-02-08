@@ -23,6 +23,34 @@
     margin-right: 64px;
 }
 
+.shopping_cart_box {
+    right: 0;
+    position: fixed;
+    margin-right: 64px;
+}
+
+.shopping_cart_picture {
+    width: 40px;
+    height: 40px;
+    background-image: url(../img/shopping_cart.png);
+    background-size: cover;
+}
+
 .login-form {
     
+}
+
+.card {
+    margin: 64px;
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    border: solid black 1 px;
+}
+
+.card_picture {
+    height: 100px;
+    width: 150px;
+    background-image: url(../img/apples.jpg);
+    background-size: cover;
 }
